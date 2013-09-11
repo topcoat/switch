@@ -53,7 +53,7 @@
             <header>
               <h2>switch</h2>
             </header>
-            <section class="component"><label class="topcoat-switch">  <input type="checkbox" class="topcoat-switch__input">  <div class="topcoat-switch__toggle"></div></label><br><br><label class="topcoat-switch">  <input type="checkbox" class="topcoat-switch__input" disabled>  <div class="topcoat-switch__toggle"></div></label></section>
+            <section class="component"><label class="topcoat-switch">  <input type="checkbox" class="topcoat-switch__input">  <div class="topcoat-switch__toggle"></div></label><br><br><label class="topcoat-switch" disabled>  <input type="checkbox" class="topcoat-switch__input">  <div class="topcoat-switch__toggle"></div></label></section>
             <section class="examples">
               <h4>Examples</h4>
               <ul>
@@ -65,59 +65,60 @@
               <section class="code">
                 <div>
                   <h3>HTML</h3>
-                  <pre class="html"><code data-language="html">&lt;label class=&quot;topcoat-switch&quot;&gt;  &lt;input type=&quot;checkbox&quot; class=&quot;topcoat-switch__input&quot;&gt;  &lt;div class=&quot;topcoat-switch__toggle&quot;&gt;&lt;/div&gt;&lt;/label&gt;&lt;br&gt;&lt;br&gt;&lt;label class=&quot;topcoat-switch&quot;&gt;  &lt;input type=&quot;checkbox&quot; class=&quot;topcoat-switch__input&quot; disabled&gt;  &lt;div class=&quot;topcoat-switch__toggle&quot;&gt;&lt;/div&gt;&lt;/label&gt;</code></pre>
+                  <pre class="html"><code data-language="html">&lt;label class=&quot;topcoat-switch&quot;&gt;  &lt;input type=&quot;checkbox&quot; class=&quot;topcoat-switch__input&quot;&gt;  &lt;div class=&quot;topcoat-switch__toggle&quot;&gt;&lt;/div&gt;&lt;/label&gt;&lt;br&gt;&lt;br&gt;&lt;label class=&quot;topcoat-switch&quot; disabled&gt;  &lt;input type=&quot;checkbox&quot; class=&quot;topcoat-switch__input&quot;&gt;  &lt;div class=&quot;topcoat-switch__toggle&quot;&gt;&lt;/div&gt;&lt;/label&gt;</code></pre>
                 </div>
                 <div>
                   <h3>CSS</h3>
                   <pre class="css"><code data-language="css">.topcoat-switch {
+  font-size: 12px;
   padding: 0 0.563rem;
   -webkit-border-radius: 4px;
   border-radius: 4px;
   border: 1px solid #a5a8a8;
   overflow: hidden;
-  width: 6rem;
+  width: 3.5rem;
 }
 .topcoat-switch__toggle:before,
 .topcoat-switch__toggle:after {
   top: -1;
-  width: 5rem;
+  width: 2.5rem;
 }
 .topcoat-switch__toggle:before {
   content: 'ON';
   color: #0083e8;
   background-color: #e0f0fa;
   right: 1rem;
-  padding-left: 1.5rem;
+  padding-left: 0.75rem;
 }
 .topcoat-switch__toggle {
   line-height: 1.313rem;
   height: 1.313rem;
-  width: 2rem;
+  width: 1rem;
   -webkit-border-radius: 4px;
   border-radius: 4px;
   color: #454545;
   text-shadow: 0 1px #fff;
   background-color: #e5e9e8;
   border: 1px solid #a5a8a8;
-  margin-left: -1.3rem;
+  margin-left: -0.6rem;
   margin-bottom: -1px;
   margin-top: -1px;
   -webkit-box-shadow: inset 0 1px #fff;
   box-shadow: inset 0 1px #fff;
-  -webkit-transition: margin-left 0.05s ease-in-out;
-  -moz-transition: margin-left 0.05s ease-in-out;
-  -o-transition: margin-left 0.05s ease-in-out;
-  -ms-transition: margin-left 0.05s ease-in-out;
-  transition: margin-left 0.05s ease-in-out;
+  -webkit-transition: transition;
+  -moz-transition: transition;
+  -o-transition: transition;
+  -ms-transition: transition;
+  transition: transition;
 }
 .topcoat-switch__toggle:after {
   content: 'OFF';
   background-color: #d3d7d7;
   left: 1rem;
-  padding-left: 2rem;
+  padding-left: 0.6rem;
 }
 .topcoat-switch__input:checked + .topcoat-switch__toggle {
-  margin-left: 2.7rem;
+  margin-left: 1.85rem;
 }
 .topcoat-switch__input:focus + .topcoat-switch__toggle {
   border: 1px solid #0940fd;

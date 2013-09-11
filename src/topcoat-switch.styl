@@ -29,8 +29,8 @@
     </label>
     <br>
     <br>
-    <label class="topcoat-switch">
-      <input type="checkbox" class="topcoat-switch__input" disabled>
+    <label class="topcoat-switch" disabled>
+      <input type="checkbox" class="topcoat-switch__input">
       <div class="topcoat-switch__toggle"></div>
     </label>
   examples:
@@ -43,11 +43,12 @@
 */
 .topcoat-switch
   @extend .switch
+  font-size var-font-size
   padding var-padding
   border-radius var-border-radius
   border var-border
   overflow hidden
-  width 6rem
+  width var-width--switch
 
 .topcoat-switch__input
   @extend .switch__input
@@ -55,46 +56,46 @@
 .topcoat-switch__toggle:before,
 .topcoat-switch__toggle:after
   top -1
-  width 5rem
+  width var-width--switch__label
 
 .topcoat-switch__toggle:before
   @extend .switch__toggle:before
-  content 'ON'
-  color #0083e8
-  background-color #e0f0fa
-  right 1rem
-  padding-left 1.5rem
+  content var-content--switch__label--left
+  color var-color--switch__label--left
+  background-color var-background-color--switch__label--left
+  right var-right--switch__label--left
+  padding-left var-padding-left--switch__label--left
 
 .topcoat-switch__toggle
   @extend .switch__toggle
   line-height var-line-height
   height var-line-height
-  width 2rem
+  width var-width--switch__toggle
   border-radius var-border-radius
   color var-color
   text-shadow var-text-shadow
   background-color var-background-color
   border var-border
-  margin-left -1.3rem
-  margin-bottom -1px
-  margin-top -1px
+  margin-left var-margin-left--switch__toggle
+  margin-bottom var-margin-bottom--switch__toggle
+  margin-top var-margin-top--switch__toggle
   box-shadow var-box-shadow
-  transition margin-left 0.05s ease-in-out
+  transition var-transition--switch__toggle
 
 .topcoat-switch__toggle:after
   @extend .switch__toggle:after
-  content 'OFF'
-  background-color #d3d7d7
-  left 1rem
-  padding-left 2rem
+  content var-content--switch__label--right
+  background-color var-background-color--switch__label--right
+  left var-left--switch__label--right
+  padding-left var-padding-left--switch__label--right
 
 .topcoat-switch__input:checked + .topcoat-switch__toggle
-  margin-left 2.7rem
+  margin-left var-margin-left--switch__toggle--checked
 
 .topcoat-switch__input:focus + .topcoat-switch__toggle
   border var-border--focus
   box-shadow var-box-shadow--focus
 
-.topcoat-switch__input:disabled + .topcoat-switch__toggle
+.topcoat-switch:disabled
   @extend .switch--disabled
 
