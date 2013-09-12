@@ -17,7 +17,7 @@
 */
 @import switch
 /* topdoc
-  name: switch
+  name: Switch
   description: Default skin for Topcoat switch
   modifiers:
     :focus: Focus state
@@ -29,8 +29,14 @@
     </label>
     <br>
     <br>
-    <label class="topcoat-switch" disabled>
-      <input type="checkbox" class="topcoat-switch__input">
+    <label class="topcoat-switch">
+      <input type="checkbox" class="topcoat-switch__input" checked>
+      <div class="topcoat-switch__toggle"></div>
+    </label>
+    <br>
+    <br>
+    <label class="topcoat-switch">
+      <input type="checkbox" class="topcoat-switch__input" disabled>
       <div class="topcoat-switch__toggle"></div>
     </label>
   examples:
