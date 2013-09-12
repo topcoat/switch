@@ -76,7 +76,7 @@
   background-clip: padding-box;
 }
 .switch--disabled,
-.topcoat-switch:disabled {
+.topcoat-switch__input:disabled + .topcoat-switch__toggle {
   opacity: 0.3;
   cursor: default;
   pointer-events: none;
