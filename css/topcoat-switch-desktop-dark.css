@@ -124,13 +124,13 @@
 .topcoat-switch__toggle:before,
 .topcoat-switch__toggle:after {
   top: -1;
-  width: 2.5rem;
+  width: 2.6rem;
 }
 .topcoat-switch__toggle:before {
   content: 'ON';
   color: #5dc1ff;
   background-color: #404141;
-  right: 1rem;
+  right: 0.8rem;
   padding-left: 0.75rem;
 }
 .topcoat-switch__toggle {
@@ -157,7 +157,7 @@
 .topcoat-switch__toggle:after {
   content: 'OFF';
   background-color: #404141;
-  left: 1rem;
+  left: 0.8rem;
   padding-left: 0.6rem;
 }
 .topcoat-switch__input:checked + .topcoat-switch__toggle {
