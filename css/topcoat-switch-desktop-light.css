@@ -124,13 +124,13 @@
 .topcoat-switch__toggle:before,
 .topcoat-switch__toggle:after {
   top: -1px;
-  width: 2.5rem;
+  width: 2.6rem;
 }
 .topcoat-switch__toggle:before {
   content: 'ON';
   color: #0083e8;
   background-color: #e0f0fa;
-  right: 1rem;
+  right: 0.8rem;
   padding-left: 0.75rem;
 }
 .topcoat-switch__toggle {
@@ -148,16 +148,16 @@
   margin-top: -1px;
   -webkit-box-shadow: inset 0 1px #fff;
   box-shadow: inset 0 1px #fff;
-  -webkit-transition: margin-left 0.05s ease-in-out;
-  -moz-transition: margin-left 0.05s ease-in-out;
-  -o-transition: margin-left 0.05s ease-in-out;
-  -ms-transition: margin-left 0.05s ease-in-out;
-  transition: margin-left 0.05s ease-in-out;
+  -webkit-transition: transition;
+  -moz-transition: transition;
+  -o-transition: transition;
+  -ms-transition: transition;
+  transition: transition;
 }
 .topcoat-switch__toggle:after {
   content: 'OFF';
   background-color: #d3d7d7;
-  left: 1rem;
+  left: 0.8rem;
   padding-left: 0.6rem;
 }
 .topcoat-switch__input:checked + .topcoat-switch__toggle {
