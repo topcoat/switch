@@ -168,3 +168,7 @@
   -webkit-box-shadow: 0 0 0 2px #6fb5f1;
   box-shadow: 0 0 0 2px #6fb5f1;
 }
+.topcoat-switch__input:disabled + .topcoat-switch__toggle:after,
+.topcoat-switch__input:disabled + .topcoat-switch__toggle:before {
+  background: transparent;
+}
