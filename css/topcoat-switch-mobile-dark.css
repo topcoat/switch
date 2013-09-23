@@ -123,7 +123,7 @@
 }
 .topcoat-switch__toggle:before,
 .topcoat-switch__toggle:after {
-  top: -1;
+  top: -1px;
   width: 5rem;
 }
 .topcoat-switch__toggle:before {
