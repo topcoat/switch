@@ -1,20 +1,20 @@
 /**
-*
-* Copyright 2012 Adobe Systems Inc.;
-*
-* Licensed under the Apache License, Version 2.0 (the "License");
-* you may not use this file except in compliance with the License.
-* You may obtain a copy of the License at
-*
-* http://www.apache.org/licenses/LICENSE-2.0
-*
-* Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS,
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-* See the License for the specific language governing permissions and
-* limitations under the License.
-*
-*/
+ *
+ * Copyright 2012 Adobe Systems Inc.;
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ */
 
 /*global module:false*/
 
@@ -25,82 +25,96 @@ module.exports = function(grunt) {
     grunt.initConfig({
 
         clean: {
-            release: ['css'],
+            release: ['css']
         },
 
         stylus: {
+            options: {
+                paths: grunt.file.expand('node_modules/topcoat-*/src'),
+                compress: false
+            },
+
             mobilelight: {
                 options: {
-                    paths: ['node_modules/topcoat-switch-base/src', 'node_modules/topcoat-utils/src/mixins', 'node_modules/topcoat-theme/src'],
-                    import: ['theme-topcoat-mobile-light', 'nib'],
-                    compress: false
+                    import: ['theme-topcoat-mobile-light'],
                 },
 
                 files: [{
-                    src: 'src/topcoat-switch.styl',
-                    dest: 'css/topcoat-switch-mobile-light.css'
-                }]
+                        src: 'src/topcoat-switch.styl',
+                        dest: 'css/topcoat-switch-mobile-light.css'
+                    }
+                ]
             },
 
             mobiledark: {
                 options: {
-                    paths: ['node_modules/topcoat-switch-base/src', 'node_modules/topcoat-utils/src/mixins', 'node_modules/topcoat-theme/src'],
-                    import: ['theme-topcoat-mobile-dark', 'nib'],
-                    compress: false
+                    import: ['theme-topcoat-mobile-dark'],
                 },
 
                 files: [{
-                    src: 'src/topcoat-switch.styl',
-                    dest: 'css/topcoat-switch-mobile-dark.css'
-                }]
+                        src: 'src/topcoat-switch.styl',
+                        dest: 'css/topcoat-switch-mobile-dark.css'
+                    }
+                ]
             },
 
             desktoplight: {
                 options: {
-                    paths: ['node_modules/topcoat-switch-base/src', 'node_modules/topcoat-utils/src/mixins', 'node_modules/topcoat-theme/src'],
-                    import: ['theme-topcoat-desktop-light', 'nib'],
-                    compress: false
+                    import: ['theme-topcoat-desktop-light'],
                 },
                 files: [{
-                    src: 'src/topcoat-switch.styl',
-                    dest: 'css/topcoat-switch-desktop-light.css'
-                }]
+                        src: 'src/topcoat-switch.styl',
+                        dest: 'css/topcoat-switch-desktop-light.css'
+                    }
+                ]
             },
 
             desktopdark: {
                 options: {
-                    paths: ['node_modules/topcoat-switch-base/src', 'node_modules/topcoat-utils/src/mixins', 'node_modules/topcoat-theme/src'],
-                    import: ['theme-topcoat-desktop-dark', 'nib'],
-                    compress: false
+                    import: ['theme-topcoat-desktop-dark'],
                 },
 
                 files: [{
-                    src: 'src/topcoat-switch.styl',
-                    dest: 'css/topcoat-switch-desktop-dark.css'
-                }]
+                        src: 'src/topcoat-switch.styl',
+                        dest: 'css/topcoat-switch-desktop-dark.css'
+                    }
+                ]
             }
         },
 
         topdoc: {
-            usageguides: {
+            demo: {
                 options: {
                     source: 'css',
-                    destination: "demo",
+                    destination: 'demo',
                     template: "node_modules/topdoc-theme/",
                     templateData: {
-                      "title": "Topcoat",
-                      "subtitle": "CSS for clean and fast web apps",
-                      "homeURL": "http://topcoat.io"
+                        "title": "Topcoat",
+                        "subtitle": "CSS for clean and fast web apps",
+                        "homeURL": "http://topcoat.io"
                     }
                 }
             }
         },
+
+        autoprefixer: {
+            dist: {
+                files: [{
+                        expand: true,
+                        cwd: 'css',
+                        src: ['*.css', '!*.min.css'],
+                        dest: 'css'
+                    }
+                ]
+            }
+        },
+
         cssmin: {
             minify: {
                 expand: true,
-                cwd: 'release/css/',
+                cwd: 'css',
                 src: ['*.css', '!*.min.css'],
-                dest: 'release/css/',
+                dest: 'css',
                 ext: '.min.css'
             }
         },
@@ -125,9 +139,11 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-topdoc');
+    grunt.loadNpmTasks('grunt-autoprefixer');
 
-    grunt.registerTask('default', ['clean', 'build', 'test','release']);
-    grunt.registerTask('build', ['stylus']);
+    grunt.registerTask('default', ['clean', 'build', 'test', 'release']);
+    grunt.registerTask('build', ['stylus', 'autoprefixer']);
     grunt.registerTask('test', ['simplemocha']);
     grunt.registerTask('release', ['cssmin', 'topdoc']);
 };
+

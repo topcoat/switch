@@ -69,67 +69,75 @@
                 </div>
                 <div>
                   <h3>CSS</h3>
-                  <pre class="css"><code data-language="css">.topcoat-switch {
+                  <pre class="css"><code data-language="css">
+.topcoat-switch {
   font-size: 16px;
   padding: 0 1.25rem;
-  -webkit-border-radius: 6px;
   border-radius: 6px;
-  border: 1px solid #303233;
+  border: 1px solid #333434;
   overflow: hidden;
   width: 6rem;
 }
+
 .topcoat-switch__toggle:before,
 .topcoat-switch__toggle:after {
   top: -1px;
   width: 5rem;
 }
+
 .topcoat-switch__toggle:before {
   content: 'ON';
-  color: #5dc1ff;
-  background-color: #404141;
+  color: #288edf;
+  background-color: #3f4041;
   right: 1rem;
   padding-left: 1.5rem;
 }
+
 .topcoat-switch__toggle {
   line-height: 3rem;
   height: 3rem;
   width: 2rem;
-  -webkit-border-radius: 6px;
   border-radius: 6px;
   color: #c6c8c8;
   text-shadow: 0 -1px rgba(0,0,0,0.69);
   background-color: #595b5b;
-  border: 1px solid #303233;
+  border: 1px solid #333434;
   margin-left: -1.3rem;
   margin-bottom: -1px;
   margin-top: -1px;
-  -webkit-box-shadow: inset 0 1px #727373;
-  box-shadow: inset 0 1px #727373;
+  -webkit-box-shadow: inset 0 1px #737373;
+  box-shadow: inset 0 1px #737373;
   -webkit-transition: margin-left 0.05s ease-in-out;
-  -moz-transition: margin-left 0.05s ease-in-out;
-  -o-transition: margin-left 0.05s ease-in-out;
-  -ms-transition: margin-left 0.05s ease-in-out;
   transition: margin-left 0.05s ease-in-out;
 }
+
 .topcoat-switch__toggle:after {
   content: 'OFF';
-  background-color: #404141;
+  background-color: #3f4041;
   left: 1rem;
   padding-left: 2rem;
 }
+
 .topcoat-switch__input:checked + .topcoat-switch__toggle {
   margin-left: 2.7rem;
 }
+
+.topcoat-switch__input:active + .topcoat-switch__toggle {
+  border: 1px solid #333434;
+  -webkit-box-shadow: inset 0 1px #737373;
+  box-shadow: inset 0 1px #737373;
+}
+
 .topcoat-switch__input:focus + .topcoat-switch__toggle {
-  border: 1px solid #0940fd;
+  border: 1px solid #0036ff;
   -webkit-box-shadow: 0 0 0 2px #6fb5f1;
   box-shadow: 0 0 0 2px #6fb5f1;
 }
+
 .topcoat-switch__input:disabled + .topcoat-switch__toggle:after,
 .topcoat-switch__input:disabled + .topcoat-switch__toggle:before {
   background: transparent;
-}
-</code></pre>
+}</code></pre>
                 </div>
               </section>
             </footer>

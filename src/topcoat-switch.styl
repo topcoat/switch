@@ -98,6 +98,10 @@
 .topcoat-switch__input:checked + .topcoat-switch__toggle
   margin-left var-margin-left--switch__toggle--checked
 
+.topcoat-switch__input:active + .topcoat-switch__toggle
+  border var-border
+  box-shadow var-box-shadow
+
 .topcoat-switch__input:focus + .topcoat-switch__toggle
   border var-border--focus
   box-shadow var-box-shadow--focus
@@ -108,3 +112,4 @@
 .topcoat-switch__input:disabled + .topcoat-switch__toggle:after,
 .topcoat-switch__input:disabled + .topcoat-switch__toggle:before
   background: transparent;
+
