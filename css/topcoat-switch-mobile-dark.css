@@ -26,6 +26,7 @@
   box-sizing: border-box;
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
+  z-index: 1;
 }
 
 .switch__input,
