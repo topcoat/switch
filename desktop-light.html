@@ -6,7 +6,7 @@
     <title>Topcoat</title>
     <meta name="viewport" content="user-scalable=no,initial-scale = 1.0,maximum-scale = 1.0">
     <link rel="stylesheet" type="text/css" href="fonts/stylesheet.css">
-    <link rel="stylesheet" type="text/css" href="../css/topcoat-switch-desktop-light.css">
+    <link rel="stylesheet" type="text/css" href="css/desktop-light.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/brackets.css"><!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
@@ -22,10 +22,10 @@
           </nav>
           <div class="combo">
             <select class="docNav">
-              <option value="index.html">Topcoat Switch Desktop Dark</option>
-              <option value="topcoat-switch-desktop-light.html" selected="selected">Topcoat Switch Desktop Light</option>
-              <option value="topcoat-switch-mobile-dark.html">Topcoat Switch Mobile Dark</option>
-              <option value="topcoat-switch-mobile-light.html">Topcoat Switch Mobile Light</option>
+              <option value="index.html">Desktop Dark</option>
+              <option value="desktop-light.html" selected="selected">Desktop Light</option>
+              <option value="mobile-dark.html">Mobile Dark</option>
+              <option value="mobile-light.html">Mobile Light</option>
             </select>
           </div>
           <div id="pageNav">
@@ -74,7 +74,7 @@
   font-size: 12px;
   padding: 0 0.563rem;
   border-radius: 4px;
-  border: 1px solid #9daca9;
+  border: 1px solid hsla(168, 8%, 65%, 1);
   overflow: hidden;
   width: 3.5rem;
 }
@@ -87,9 +87,9 @@
 
 .topcoat-switch__toggle:before {
   content: 'ON';
-  color: #288edf;
-  background-color: #e5f1fb;
-  right: 0.8rem;
+  color: hsla(207, 74%, 52%, 1);
+  background-color: hsla(180, 5%, 83%, 1);
+  right: .8rem;
   padding-left: 0.75rem;
 }
 
@@ -98,23 +98,23 @@
   height: 1.313rem;
   width: 1rem;
   border-radius: 4px;
-  color: #454545;
-  text-shadow: 0 1px #fff;
-  background-color: #e5e9e8;
-  border: 1px solid #9daca9;
+  color: hsla(0, 0%, 27%, 1);
+  text-shadow: 0 1px hsla(0, 100%, 100%, 1);
+  background-color: hsla(165, 8%, 91%, 1);
+  border: 1px solid hsla(168, 8%, 65%, 1);
   margin-left: -0.6rem;
   margin-bottom: -1px;
   margin-top: -1px;
-  -webkit-box-shadow: inset 0 1px #fff;
-  box-shadow: inset 0 1px #fff;
+  -webkit-box-shadow: inset 0 1px hsla(0, 100%, 100%, 1);
+  box-shadow: inset 0 1px hsla(0, 100%, 100%, 1);
   -webkit-transition: margin-left 0.05s ease-in-out;
   transition: margin-left 0.05s ease-in-out;
 }
 
 .topcoat-switch__toggle:after {
   content: 'OFF';
-  background-color: #d2d6d6;
-  left: 0.8rem;
+  background-color: hsla(180, 5%, 83%, 1);
+  left: .8rem;
   padding-left: 0.6rem;
 }
 
@@ -123,15 +123,15 @@
 }
 
 .topcoat-switch__input:active + .topcoat-switch__toggle {
-  border: 1px solid #9daca9;
-  -webkit-box-shadow: inset 0 1px #fff;
-  box-shadow: inset 0 1px #fff;
+  border: 1px solid hsla(168, 8%, 65%, 1);
+  -webkit-box-shadow: inset 0 1px hsla(0, 100%, 100%, 1);
+  box-shadow: inset 0 1px hsla(0, 100%, 100%, 1);
 }
 
 .topcoat-switch__input:focus + .topcoat-switch__toggle {
-  border: 1px solid #0036ff;
-  -webkit-box-shadow: 0 0 0 2px #6fb5f1;
-  box-shadow: 0 0 0 2px #6fb5f1;
+  border: 1px solid hsla(227, 100%, 50%, 1);
+  -webkit-box-shadow: 0 0 0 2px hsla(208, 82%, 69%, 1);
+  box-shadow: 0 0 0 2px hsla(208, 82%, 69%, 1);
 }
 
 .topcoat-switch__input:disabled + .topcoat-switch__toggle:after,

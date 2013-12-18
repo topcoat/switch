@@ -50,7 +50,7 @@ module.exports = function(grunt) {
             demo: {
                 options: {
                     source: 'css',
-                    destination: 'demo',
+                    destination: './',
                     template: "node_modules/topdoc-theme/",
                     templateData: {
                         "title": "Topcoat",
