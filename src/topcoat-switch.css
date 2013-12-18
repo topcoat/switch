@@ -15,7 +15,7 @@
 * limitations under the License.
 *
 */
-@import .switch-base";
+@import "topcoat-switch-base";
 /* topdoc
   name: Switch
   description: Default skin for Topcoat switch
@@ -23,21 +23,21 @@
     :focus: Focus state
     :disabled: Disabled state
   markup:
-    <label class=.switch">
-      <input type="checkbox" class=.switch__input">
-      <div class=.switch__toggle"></div>
+    <label class="topcoat-switch">
+      <input type="checkbox" class="topcoat-switch__input">
+      <div class="topcoat-switch__toggle"></div>
     </label>
     <br>
     <br>
-    <label class=.switch">
-      <input type="checkbox" class=.switch__input" checked>
-      <div class=.switch__toggle"></div>
+    <label class="topcoat-switch">
+      <input type="checkbox" class="topcoat-switch__input" checked>
+      <div class="topcoat-switch__toggle"></div>
     </label>
     <br>
     <br>
-    <label class=.switch">
-      <input type="checkbox" class=.switch__input" disabled>
-      <div class=.switch__toggle"></div>
+    <label class="topcoat-switch">
+      <input type="checkbox" class="topcoat-switch__input" disabled>
+      <div class="topcoat-switch__toggle"></div>
     </label>
   examples:
     mobile switch: http://codepen.io/Topcoat/pen/upxds
@@ -70,8 +70,8 @@
 .switch__toggle:before {
   extend: %switch__toggle--pseudo;
   content: var(content--switch__label--left);
-  color: var(color--switch__label--left);
-  background-color: var(background-color--switch__label--left);
+  color: var(background-color--cta);
+  background-color: var(background-color--down);
   right: var(right--switch__label--left);
   padding-left: var(padding-left--switch__label--left);
 }
@@ -96,9 +96,10 @@
 .switch__toggle:after {
   extend: %switch__toggle--pseudo;
   content: var(content--switch__label--right);
-  background-color: var(background-color--switch__label--right);
+  background-color: var(background-color--down);
   left: var(left--switch__label--right);
   padding-left: var(padding-left--switch__label--right);
+}
 
 .switch__input:checked + .switch__toggle {
   margin-left: var(margin-left--switch__toggle--checked);
