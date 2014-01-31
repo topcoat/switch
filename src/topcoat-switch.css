@@ -61,13 +61,9 @@
   extend: %switch__input;
 }
 
-.switch__toggle:before,
-.switch__toggle:after {
+.switch__toggle:before {
   top: -1px;
   width: var(width--switch__label);
-}
-
-.switch__toggle:before {
   extend: %switch__toggle--pseudo;
   content: var(content--switch__label--left);
   color: var(background-color--cta);
@@ -94,6 +90,8 @@
 }
 
 .switch__toggle:after {
+  top: -1px;
+  width: var(width--switch__label);
   extend: %switch__toggle--pseudo;
   content: var(content--switch__label--right);
   background-color: var(background-color--down);
