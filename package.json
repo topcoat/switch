@@ -1,6 +1,6 @@
 {
   "name": "topcoat-switch",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Default styling for Topcoat switch",
   "main": "index.html",
   "style": "src/topcoat-switch.css",
